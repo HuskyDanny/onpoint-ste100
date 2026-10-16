@@ -53,9 +53,41 @@ pi contract notes (measured 2026-10-16, pi 1.3.0): explicit `--extension
 
 ## test.sh invariants
 
-1. surfaces fresh (`build.py --check`) · 2. axis order 0..n · 3. claude hook
-payload < 9800B · 4. `--line` names both axes · 5. pi bodies ≡ claude persona
-bodies · 6. output-style ≤ ½ bodies · 7. no vendor model name in the truth.
+8 checks: surfaces fresh · axis order 0..n · claude hook payload < 9800B ·
+`--line` names both axes · pi bodies ≡ claude persona bodies · output-style
+≤ ½ bodies · no vendor model name in the truth · no borrowed style labels.
+
+## Is it "clean" ASD-STE100? (cross-check 2026-10-16)
+
+Cross-checked against the spec's public structure (Issue 9: 53 rules in 9
+sections + ~900-word dictionary) and max.nardit.com's review of Karpathy's
+STE post. Honest statement, in that post's own terms:
+
+- **Certified by test.sh (structure)**: one instruction per sentence, no
+  sentence over the STE limits measured in the audit, active voice, no
+  borrowed style labels (i-have-adhd, caveman — upstream's own rule NAMES;
+  they live in provenance docs now, not in the rulebook), no emoji/tables,
+  short-word substitutions.
+- **NOT certified (vocabulary)**: the ~900-word approved dictionary (one
+  meaning, one part of speech each) is the spec's real discriminator and is
+  not checked here. This rulebook is **STE-flavored English, not STE** — the
+  same finding that article applies to every AI STE attempt without a
+  linter. The structural rules are what generalize to an LLM rulebook; the
+  dictionary is a maintainer-grade layer we deliberately do not claim.
+- **"Plausibility must not be confused with verified compliance"** (STEMG
+  AI white paper, quoted in the article): test.sh verifies structure and
+  parity, never model-output compliance. The A/B judge measures effect, not
+  STE adherence — the future sweep should add a mechanical linter
+  (e.g. Vale) over arm answers.
+- **The hedges pair resolves the article's main warning** ("keep every if,
+  unless, not yet verified — a clearer sentence can become a stronger
+  claim"): the rulebook holds BOTH halves — rule 26 keeps a hedge carrying
+  real uncertainty ("deleting it manufactures confidence"), rule 30 drops
+  filler hedging. Simplification must never strengthen a claim, and the
+  pair already encodes that.
+- The output-style surface (ported from upstream) also dropped the labels
+  today (description + headings + table rows); its voice remains upstream's,
+  and it is the one surface whose prose makes no STE claim.
 
 ## Arming (the field's experiment)
 

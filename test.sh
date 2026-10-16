@@ -59,4 +59,13 @@ else
   ok "personas model-agnostic (no vendor slugs)"
 fi
 
+# 8. the STE-clean rule: no borrowed upstream style labels in the truth
+#    (cross-check 2026-10-16, max.nardit.com Karpathy/STE article: labels are
+#    not instructions — an STE-branded rulebook carries no slang labels)
+if grep -rqiE "i-have-adhd|caveman" personas/*.yaml; then
+  bad "borrowed style label in persona YAML (move to provenance docs)"
+else
+  ok "personas STE-clean (no borrowed style labels; provenance in MAPPING)"
+fi
+
 exit $FAIL

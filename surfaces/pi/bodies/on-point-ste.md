@@ -74,7 +74,7 @@ After the first line: write one or two sentences of context. Then give the
 action. Do not write mechanism that the user did not ask for. Do not list
 symptoms. Name the change in the system.
 
-### The next line — the action (the i-have-adhd rule)
+### The next line — the action
 
 The idea updates the reader. The action moves the work. The idea owns the
 opening. The action owns the line under it. Make the action concrete: a

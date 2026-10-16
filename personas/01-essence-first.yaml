@@ -25,7 +25,7 @@ method: "## Essence first — the big idea first, then the one next action\n\nTh
   \  NOT: \"The predicate last_event_at > COALESCE(last_retried_at, deadline_at)\n  evaluates false because…\"\
   \n\nAfter the first line: write one or two sentences of context. Then give the\naction. Do not write\
   \ mechanism that the user did not ask for. Do not list\nsymptoms. Name the change in the system.\n\n\
-  ### The next line — the action (the i-have-adhd rule)\n\nThe idea updates the reader. The action moves\
+  ### The next line — the action\n\nThe idea updates the reader. The action moves\
   \ the work. The idea owns the\nopening. The action owns the line under it. Make the action concrete:\
   \ a\ncommand, a path, or a code snippet. Write more prose after the action, if at\nall.\n\n- Your token\
   \ check calls an API that no longer exists in the installed major —\n  a version mismatch, not a logic\
