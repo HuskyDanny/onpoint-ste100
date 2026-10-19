@@ -95,6 +95,26 @@ Armed as arm `b` of `Projects/Experiments/onpoint-ste100`:
 - pi channel: `SYSTEM_PROMPT_FILE.b` → `surfaces/pi/bodies/on-point-ste.md`
 - claude channel: `PLUGIN_DIR.b` → `surfaces/claude-plugin/`
 
+## Authoring lesson (measured 2026-10-19)
+
+A **negative format prohibition primes the failure it forbids.** The merge arm
+`g` (this rulebook's shape inside one STE directive, plus the community skill's
+structural rules) leaked fabricated tool-call markup (`<tool_call>list_dir…`)
+when its directive said "do not write a tool call / do not imitate a tool-call
+format." GLM-5.3-Flash emitted exactly that markup. Rephrasing the rule
+positively — *"If a task needs tools, call the tools first. Then write the
+final answer."* plus the capstone *"The answer is plain text: prose, lists,
+and code."* — removed the leak across three consecutive runs.
+
+Two consequences for any rulebook here:
+- State the desired shape, not the forbidden one. A prohibition names the
+  pattern the model then produces.
+- `Projects/Experiments/*/harness/run.py` now flags answers that imitate the
+  harness's own tool-call markup (`result.json` `leak: true`) and the judge
+  excludes them, because the arm runs inside the experiment tree and the
+  harness preamble exposes its cwd — enough for the model to answer as if it
+  were an agent session.
+
 ## Provenance
 
 - Rulebook authored 2026-10-16 on OnPoint branch `ste100` (`e143bf7`) — the
